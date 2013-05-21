@@ -76,7 +76,8 @@
         </p>
     
         <p>
-          <img tal:replace="structure here/rss.png" />
+          <img tal:replace="structure here/rss.png" tal:condition="here/rss.png" />
+          <img tal:replace="structure here/rss.gif" tal:condition="here/rss.gif" />
           <a tal:attributes="href view/getSyndicationURL" 
              i18n:translate="phc_rss_all">
             Feed for all documentation.
